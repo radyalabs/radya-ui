@@ -1,14 +1,18 @@
-import styles from './Button.module.css';
+import styles from './Button.module.scss';
 
 interface ButtonProps {
   /**
-   * Is this the principal call to action on the page?
+   * What background color to use
    */
-  primary?: boolean;
+  className?: string;
   /**
    * What background color to use
    */
-  backgroundColor?: string;
+  color?: 'primary' | 'danger';
+  /**
+   * Button colors
+   */
+  type?: 'filled' | 'outline' | 'outline-dashed';
   /**
    * How large should the button be?
    */
@@ -17,6 +21,14 @@ interface ButtonProps {
    * Button contents
    */
   label: string;
+  /**
+   * Optional button rounded
+   */
+  isRound?: boolean;
+  /**
+   * Optional click handler
+   */
+  isDisabled?: boolean;
   /**
    * Optional click handler
    */
@@ -27,24 +39,40 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 const Button = ({
-  primary = false,
+  color = 'primary',
+  type = 'filled',
   size = 'medium',
-  backgroundColor,
+  isDisabled = false,
+  isRound = false,
+  className,
   label,
   onClick,
 }: ButtonProps) => {
-  const mode = primary
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary';
+  const styleButton = [styles.button];
+
+  if (className) styleButton.push(className);
+
+  if (color === 'primary') styleButton.push(styles.colorPrimary);
+  if (color === 'danger') styleButton.push(styles.colorDanger);
+
+  if (type === 'filled') styleButton.push(styles.typeFilled);
+  if (type === 'outline') styleButton.push(styles.typeOutline);
+  if (type === 'outline-dashed') styleButton.push(styles.typeOutlineDashed);
+
+  if (size === 'small') styleButton.push(styles.sizeSmall);
+  if (size === 'medium') styleButton.push(styles.sizeMedium);
+  if (size === 'large') styleButton.push(styles.sizeLarge);
+
+  if (isRound) styleButton.push(styles.rounded);
+
+  if (isDisabled) styleButton.push(styles.disabled);
+
   return (
     <button
       type="button"
-      className={[
-        `${styles.button} bg-red-500 rounded-full storybook-button--${size}`,
-        mode,
-      ].join()}
-      style={{ backgroundColor }}
+      className={styleButton.join(' ')}
       onClick={onClick}
+      disabled={isDisabled}
     >
       {label}
     </button>

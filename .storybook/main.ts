@@ -19,7 +19,7 @@ const config: StorybookConfig = {
   staticDirs: ['..\\public'],
   webpackFinal: (config: any) => {
     config.module.rules.push({
-      test: /\.css$/,
+      test: /\.scss$/,
       use: [
         {
           loader: 'postcss-loader',

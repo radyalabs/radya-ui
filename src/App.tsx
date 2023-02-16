@@ -8,7 +8,7 @@ import { LayoutProvider } from '@/contexts/LayoutContext';
 
 import Button from './components/base/Button/Button';
 
-import './App.css';
+import './App.scss';
 
 const App = () => (
   <LayoutProvider>
