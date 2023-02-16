@@ -1,4 +1,4 @@
-import './button.css';
+import styles from './Button.module.css';
 
 interface ButtonProps {
   /**
@@ -33,11 +33,16 @@ const Button = ({
   label,
   onClick,
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary
+    ? 'storybook-button--primary'
+    : 'storybook-button--secondary';
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={[
+        `${styles.button} bg-red-500 rounded-full storybook-button--${size}`,
+        mode,
+      ].join()}
       style={{ backgroundColor }}
       onClick={onClick}
     >
