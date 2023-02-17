@@ -62,7 +62,11 @@
 
   &.disabled,
   &.disabled.colorPrimary,
-  &.disabled.colorDanger {
+  &.disabled.colorDanger,
+  &.disabled.typeOutline.colorPrimary,
+  &.disabled.typeOutline.colorDanger,
+  &.disabled.typeOutlineDashed.colorPrimary,
+  &.disabled.typeOutlineDashed.colorDanger {
     @apply cursor-not-allowed
     border border-solid border-[#D9D9D9]
     bg-[#F5F5F5] text-[#BFBFBF]
