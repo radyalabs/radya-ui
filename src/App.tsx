@@ -6,7 +6,9 @@ import Header from '@/components/layout/Header';
 import Sidebar from '@/components/layout/Sidebar';
 import { LayoutProvider } from '@/contexts/LayoutContext';
 
-import './App.css';
+import Button from './components/base/Button/Button';
+
+import './App.scss';
 
 const App = () => (
   <LayoutProvider>
@@ -14,6 +16,7 @@ const App = () => (
     <Sidebar />
     <Content>
       <Outlet />
+      <Button label="Test" />
     </Content>
   </LayoutProvider>
 );

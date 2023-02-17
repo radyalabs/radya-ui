@@ -11,6 +11,7 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'airbnb-typescript',
+    'plugin:storybook/recommended',
   ],
   overrides: [
     {
@@ -23,7 +24,9 @@ module.exports = {
               // Packages `react` related packages come first.
               ['^react', '^@?\\w'],
               // Internal packages.
-              ['^(@|assets|components|contexts|constants|helpers|types|utils|hooks|reducers|queries|pages|styles)(/.*|$)'],
+              [
+                '^(@|assets|components|contexts|constants|helpers|types|utils|hooks|reducers|queries|pages|styles)(/.*|$)',
+              ],
               // Side effect imports.
               ['^\\u0000'],
               // Parent imports. Put `..` last.
@@ -52,33 +55,33 @@ module.exports = {
     project: './tsconfig.json',
     parser: '@typescript-eslint/parser',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'eslint-plugin-simple-import-sort',
-  ],
+  plugins: ['react', '@typescript-eslint', 'eslint-plugin-simple-import-sort'],
   rules: {
     'import/extensions': 'off',
-    'import/no-extraneous-dependencies': ['error', {'devDependencies': true}],
-    indent: [
-      'warn',
-      2,
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+      },
     ],
+    indent: ['warn', 2],
     'linebreak-style': 'off',
-    quotes: [
-      'error',
-      'single',
-    ],
-    semi: [
-      'error',
-      'always',
-    ],
+    quotes: ['error', 'single'],
+    semi: ['error', 'always'],
     'no-plusplus': 'off',
     'no-restricted-syntax': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     '@typescript-eslint/consistent-type-imports': 'warn',
-    '@typescript-eslint/array-type': ['error', {default: 'array-simple'}],
+    '@typescript-eslint/array-type': [
+      'error',
+      {
+        default: 'array-simple',
+      },
+    ],
     '@typescript-eslint/no-explicit-any': 'error',
     'react/button-has-type': 'warn',
   },
