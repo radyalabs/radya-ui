@@ -11,17 +11,21 @@ const Button = ({
   loading = false,
   rounded = false,
   size = 'medium',
-  type = 'primary',
+  type = 'default',
+  variant = 'default',
   onClick,
 }: ButtonProps) => {
   const styleButton = [styles.button];
 
   if (className) styleButton.push(className);
 
+  if (type === 'default') styleButton.push(styles.typeDefault);
   if (type === 'primary') styleButton.push(styles.typePrimary);
   if (type === 'danger') styleButton.push(styles.typeDanger);
-  if (type === 'outline') styleButton.push(styles.typeOutline);
-  if (type === 'dashed') styleButton.push(styles.typeDashed);
+
+  if (variant === 'default') styleButton.push(styles.variantDefault);
+  if (variant === 'outline') styleButton.push(styles.variantOutline);
+  if (variant === 'dashed') styleButton.push(styles.variantDashed);
 
   if (size === 'small') styleButton.push(styles.sizeSmall);
   if (size === 'medium') styleButton.push(styles.sizeMedium);

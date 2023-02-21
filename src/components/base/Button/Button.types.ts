@@ -13,7 +13,12 @@ interface ButtonProps {
   /**
    * Button colors
    */
-  type?: 'primary' | 'danger' | 'outline' | 'dashed';
+  type?: 'default' | 'primary' | 'danger';
+  /**
+  /**
+   * Button colors
+   */
+  variant?: 'default' | 'outline' | 'dashed';
   /**
    * How large should the button be?
    */

@@ -27,7 +27,7 @@ Import the component first
 Then start using the component:
 
 <Canvas>
-  <Story of={ButtonStories.Primary} />
+  <Story of={ButtonStories.Default} />
 </Canvas>
 
 ## <a id="component-api"></a>Component API
@@ -38,16 +38,24 @@ Then start using the component:
 
 ## <a id="applications-examples"></a>Applications & Examples
 
-### <a id="type-variant"></a>`Type` variants
+### <a id="type-variant"></a>`Type`
 
 <Canvas>
+  <Story of={ButtonStories.Default} />
   <Story of={ButtonStories.Primary} />
   <Story of={ButtonStories.Danger} />
+
+</Canvas>
+
+### <a id="type-variant"></a>`Variants`
+
+<Canvas>
+  <Story of={ButtonStories.Default} />
   <Story of={ButtonStories.Outline} />
   <Story of={ButtonStories.Dashed} />
 </Canvas>
 
-### <a id="size-variant"></a>`Size` variants
+### <a id="size-variant"></a>`Size`
 
 <Canvas>
   <Story of={ButtonStories.Large} />
@@ -55,19 +63,19 @@ Then start using the component:
   <Story of={ButtonStories.Small} />
 </Canvas>
 
-### <a id="size-variant"></a>`Rounded` variants
+### <a id="size-variant"></a>`Rounded`
 
 <Canvas>
   <Story of={ButtonStories.Rounded} />
 </Canvas>
 
-### <a id="size-variant"></a>`Disabled` variants
+### <a id="size-variant"></a>`Disabled`
 
 <Canvas style={{ background: '#2E2D2E' }}>
   <Story of={ButtonStories.Disabled} />
 </Canvas>
 
-### <a id="size-variant"></a>`Loading` variants
+### <a id="size-variant"></a>`Loading`
 
 <Canvas>
   <Story of={ButtonStories.Loading} />

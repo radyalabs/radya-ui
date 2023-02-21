@@ -16,9 +16,15 @@ const meta = {
       options: ['small', 'medium', 'large'],
     },
     type: {
-      defaultValue: 'primary',
+      defaultValue: 'default',
       control: { type: 'radio' },
-      options: ['primary', 'danger', 'outline', 'dashed'],
+      options: ['default', 'primary', 'danger'],
+      description: 'Description belongs here',
+    },
+    variant: {
+      defaultValue: 'default',
+      control: { type: 'radio' },
+      options: ['default', 'outline', 'dashed'],
       description: 'Description belongs here',
     },
     rounded: {
@@ -37,6 +43,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
+export const Default: Story = {
+  args: {
+    type: 'default',
+  },
+};
+
 export const Primary: Story = {
   args: {
     type: 'primary',
@@ -49,16 +61,21 @@ export const Danger: Story = {
   },
 };
 
+export const DefaultVariant: Story = {
+  args: {
+    variant: 'default',
+  },
+};
+
 export const Outline: Story = {
   args: {
-    type: 'outline',
+    variant: 'outline',
   },
 };
 
 export const Dashed: Story = {
   args: {
-    size: 'medium',
-    type: 'dashed',
+    variant: 'dashed',
   },
 };
 

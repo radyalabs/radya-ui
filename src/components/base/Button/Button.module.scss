@@ -3,25 +3,61 @@
   transition-colors ease-in-out duration-300
   rounded-sm;
 
+  &.typeDefault {
+    @apply bg-slate-200 hover:bg-slate-300 
+    text-slate-900;
+  }
+
   &.typePrimary {
     @apply bg-primary-500 hover:bg-primary-700 
     text-white;
   }
+
   &.typeDanger {
     @apply bg-danger-500 hover:bg-danger-700
     text-white;
   }
 
-  &.typeFilled {
-    @apply border-none;
-  }
-
-  &.typeOutline {
+  &.variantDefault {
     @apply border border-solid;
   }
 
-  &.typeDashed {
+  &.variantOutline {
+    @apply border border-solid;
+
+    &.typeDefault {
+      @apply border-slate-800 bg-transparent hover:bg-slate-800 
+      text-slate-800 hover:text-white;
+    }
+
+    &.typePrimary {
+      @apply border-primary-500 bg-transparent hover:bg-primary-500 
+      text-primary-500 hover:text-white;
+    }
+
+    &.typeDanger {
+      @apply border-danger-500 bg-transparent hover:bg-danger-500 
+      text-danger-500 hover:text-white;
+    }
+  }
+
+  &.variantDashed {
     @apply border border-dashed;
+
+    &.typeDefault {
+      @apply border-slate-800 bg-transparent hover:bg-slate-800 
+      text-slate-800 hover:text-white;
+    }
+
+    &.typePrimary {
+      @apply border-primary-500 bg-transparent hover:bg-primary-500 
+      text-primary-500 hover:text-white;
+    }
+
+    &.typeDanger {
+      @apply border-danger-500 bg-transparent hover:bg-danger-500 
+      text-danger-500 hover:text-white;
+    }
   }
 
   &.sizeSmall {
