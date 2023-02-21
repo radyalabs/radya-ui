@@ -6,9 +6,9 @@ import Button from './Button';
 const meta = {
   title: 'Example/Button',
   component: Button,
-  tags: ['autodocs'],
   args: {
     children: 'Button',
+    size: 'medium',
   },
   argTypes: {
     size: {
@@ -40,30 +40,46 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     type: 'primary',
-    size: 'medium',
   },
 };
 
-export const Secondary: Story = {
-  args: {},
+export const Danger: Story = {
+  args: {
+    type: 'danger',
+  },
 };
 
-export const Large: Story = {
+export const Outline: Story = {
   args: {
-    size: 'large',
+    type: 'outline',
+  },
+};
+
+export const Dashed: Story = {
+  args: {
+    size: 'medium',
+    type: 'dashed',
   },
 };
 
 export const Small: Story = {
   args: {
     size: 'small',
+    type: 'primary',
   },
 };
 
-export const Outline: Story = {
+export const Medium: Story = {
   args: {
-    size: 'small',
-    type: 'outline',
+    size: 'medium',
+    type: 'primary',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'large',
+    type: 'primary',
   },
 };
 
@@ -76,5 +92,11 @@ export const Rounded: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
+  },
+};
+
+export const Loading: Story = {
+  args: {
+    loading: true,
   },
 };
