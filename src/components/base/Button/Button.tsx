@@ -1,80 +1,43 @@
+import { Spinner } from '@/components/icons';
+
+import type ButtonProps from './Button.types';
+
 import styles from './Button.module.scss';
 
-interface ButtonProps {
-  /**
-   * What background color to use
-   */
-  className?: string;
-  /**
-   * What background color to use
-   */
-  color?: 'primary' | 'danger';
-  /**
-   * Button colors
-   */
-  type?: 'filled' | 'outline' | 'outline-dashed';
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional button rounded
-   */
-  isRound?: boolean;
-  /**
-   * Optional click handler
-   */
-  isDisabled?: boolean;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
-}
-
-/**
- * Primary UI component for user interaction
- */
 const Button = ({
-  color = 'primary',
-  type = 'filled',
-  size = 'medium',
-  isDisabled = false,
-  isRound = false,
+  children,
   className,
-  label,
+  disabled = false,
+  loading = false,
+  rounded = false,
+  size = 'medium',
+  type = 'primary',
   onClick,
 }: ButtonProps) => {
   const styleButton = [styles.button];
 
   if (className) styleButton.push(className);
 
-  if (color === 'primary') styleButton.push(styles.colorPrimary);
-  if (color === 'danger') styleButton.push(styles.colorDanger);
-
-  if (type === 'filled') styleButton.push(styles.typeFilled);
+  if (type === 'primary') styleButton.push(styles.typePrimary);
+  if (type === 'danger') styleButton.push(styles.typeDanger);
   if (type === 'outline') styleButton.push(styles.typeOutline);
-  if (type === 'outline-dashed') styleButton.push(styles.typeOutlineDashed);
+  if (type === 'dashed') styleButton.push(styles.typeDashed);
 
   if (size === 'small') styleButton.push(styles.sizeSmall);
   if (size === 'medium') styleButton.push(styles.sizeMedium);
   if (size === 'large') styleButton.push(styles.sizeLarge);
 
-  if (isRound) styleButton.push(styles.rounded);
-
-  if (isDisabled) styleButton.push(styles.disabled);
+  if (rounded) styleButton.push(styles.rounded);
+  if (disabled) styleButton.push(styles.disabled);
 
   return (
     <button
       type="button"
-      className={styleButton.join(' ')}
+      className={`rounded-full ${styleButton.join(' ')}`}
       onClick={onClick}
-      disabled={isDisabled}
+      disabled={disabled}
     >
-      {label}
+      {loading ? <Spinner /> : children}
     </button>
   );
 };

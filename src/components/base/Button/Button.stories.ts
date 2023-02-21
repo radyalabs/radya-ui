@@ -7,27 +7,27 @@ const meta = {
   title: 'Example/Button',
   component: Button,
   tags: ['autodocs'],
+  args: {
+    children: 'Button',
+  },
   argTypes: {
     size: {
       control: { type: 'inline-radio' },
       options: ['small', 'medium', 'large'],
     },
-    color: {
-      defaultValue: 'primary',
-      control: { type: 'inline-radio' },
-      options: ['primary', 'danger'],
-      description: 'Description',
-      type: 'string',
-    },
     type: {
-      defaultValue: 'filled',
+      defaultValue: 'primary',
       control: { type: 'radio' },
-      options: ['filled', 'outline', 'outline-dashed'],
+      options: ['primary', 'danger', 'outline', 'dashed'],
+      description: 'Description belongs here',
     },
-    isRound: {
+    rounded: {
       control: 'boolean',
     },
-    isDisabled: {
+    disabled: {
+      control: 'boolean',
+    },
+    loading: {
       control: 'boolean',
     },
   },
@@ -39,51 +39,42 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    color: 'primary',
-    label: 'Button',
+    type: 'primary',
     size: 'medium',
-    type: 'filled',
   },
 };
 
 export const Secondary: Story = {
-  args: {
-    label: 'Button',
-  },
+  args: {},
 };
 
 export const Large: Story = {
   args: {
     size: 'large',
-    label: 'Button',
   },
 };
 
 export const Small: Story = {
   args: {
     size: 'small',
-    label: 'Button',
   },
 };
 
 export const Outline: Story = {
   args: {
     size: 'small',
-    label: 'Button',
     type: 'outline',
   },
 };
 
 export const Rounded: Story = {
   args: {
-    label: 'Button',
-    isRound: true,
+    rounded: true,
   },
 };
 
 export const Disabled: Story = {
   args: {
-    label: 'Button',
-    isDisabled: true,
+    disabled: true,
   },
 };

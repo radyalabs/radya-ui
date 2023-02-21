@@ -16,7 +16,7 @@ const App = () => (
     <Sidebar />
     <Content>
       <Outlet />
-      <Button label="Test" />
+      <Button loading>Test</Button>
     </Content>
   </LayoutProvider>
 );
