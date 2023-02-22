@@ -79,10 +79,12 @@
   &.disabled,
   &.disabled.typePrimary,
   &.disabled.typeDanger,
-  &.disabled.typeOutline.typePrimary,
-  &.disabled.typeOutline.typeDanger,
-  &.disabled.typeDashed.typePrimary,
-  &.disabled.typeDashed.typeDanger {
+  &.disabled.variantOutline.typeDefault,
+  &.disabled.variantOutline.typePrimary,
+  &.disabled.variantOutline.typeDanger,
+  &.disabled.variantDashed.typeDefault,
+  &.disabled.variantDashed.typePrimary,
+  &.disabled.variantDashed.typeDanger {
     @apply cursor-not-allowed
     border border-solid border-[#D9D9D9]
     bg-[#F5F5F5] text-[#BFBFBF]
