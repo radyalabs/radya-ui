@@ -3,17 +3,17 @@
   transition-colors ease-in-out duration-300
   rounded-sm;
 
-  &.typeDefault {
+  &.colorDefault {
     @apply bg-slate-200 hover:bg-slate-300 
     text-slate-900;
   }
 
-  &.typePrimary {
+  &.colorPrimary {
     @apply bg-primary-500 hover:bg-primary-700 
     text-white;
   }
 
-  &.typeDanger {
+  &.colorDanger {
     @apply bg-danger-500 hover:bg-danger-700
     text-white;
   }
@@ -25,17 +25,17 @@
   &.variantOutline {
     @apply border border-solid;
 
-    &.typeDefault {
+    &.colorDefault {
       @apply border-slate-800 bg-transparent hover:bg-slate-800 
       text-slate-800 hover:text-white;
     }
 
-    &.typePrimary {
+    &.colorPrimary {
       @apply border-primary-500 bg-transparent hover:bg-primary-500 
       text-primary-500 hover:text-white;
     }
 
-    &.typeDanger {
+    &.colorDanger {
       @apply border-danger-500 bg-transparent hover:bg-danger-500 
       text-danger-500 hover:text-white;
     }
@@ -44,17 +44,17 @@
   &.variantDashed {
     @apply border border-dashed;
 
-    &.typeDefault {
+    &.colorDefault {
       @apply border-slate-800 bg-transparent hover:bg-slate-800 
       text-slate-800 hover:text-white;
     }
 
-    &.typePrimary {
+    &.colorPrimary {
       @apply border-primary-500 bg-transparent hover:bg-primary-500 
       text-primary-500 hover:text-white;
     }
 
-    &.typeDanger {
+    &.colorDanger {
       @apply border-danger-500 bg-transparent hover:bg-danger-500 
       text-danger-500 hover:text-white;
     }
@@ -77,14 +77,14 @@
   }
 
   &.disabled,
-  &.disabled.typePrimary,
-  &.disabled.typeDanger,
-  &.disabled.variantOutline.typeDefault,
-  &.disabled.variantOutline.typePrimary,
-  &.disabled.variantOutline.typeDanger,
-  &.disabled.variantDashed.typeDefault,
-  &.disabled.variantDashed.typePrimary,
-  &.disabled.variantDashed.typeDanger {
+  &.disabled.colorPrimary,
+  &.disabled.colorDanger,
+  &.disabled.variantOutline.colorDefault,
+  &.disabled.variantOutline.colorPrimary,
+  &.disabled.variantOutline.colorDanger,
+  &.disabled.variantDashed.colorDefault,
+  &.disabled.variantDashed.colorPrimary,
+  &.disabled.variantDashed.colorDanger {
     @apply cursor-not-allowed
     border border-solid border-[#D9D9D9]
     bg-[#F5F5F5] text-[#BFBFBF]

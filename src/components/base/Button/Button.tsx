@@ -11,7 +11,7 @@ const Button = ({
   loading = false,
   rounded = false,
   size = 'medium',
-  type = 'default',
+  color = 'default',
   variant = 'default',
   onClick,
 }: ButtonProps) => {
@@ -19,9 +19,9 @@ const Button = ({
 
   if (className) styleButton.push(className);
 
-  if (type === 'default') styleButton.push(styles.typeDefault);
-  if (type === 'primary') styleButton.push(styles.typePrimary);
-  if (type === 'danger') styleButton.push(styles.typeDanger);
+  if (color === 'default') styleButton.push(styles.colorDefault);
+  if (color === 'primary') styleButton.push(styles.colorPrimary);
+  if (color === 'danger') styleButton.push(styles.colorDanger);
 
   if (variant === 'default') styleButton.push(styles.variantDefault);
   if (variant === 'outline') styleButton.push(styles.variantOutline);

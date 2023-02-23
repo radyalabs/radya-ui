@@ -2,21 +2,20 @@ import type { ReactNode } from 'react';
 
 interface ButtonProps {
   /**
-   * Custom Classname
+   * Content of button, can be Text or Icon
    */
   children: ReactNode;
   /**
-    /**
-     * Custom Classname
-     */
+   * Custom Classname
+   */
   className?: string;
   /**
    * Button colors
    */
-  type?: 'default' | 'primary' | 'danger';
+  color?: 'default' | 'primary' | 'danger';
   /**
   /**
-   * Button colors
+   * Button Variants
    */
   variant?: 'default' | 'outline' | 'dashed';
   /**
