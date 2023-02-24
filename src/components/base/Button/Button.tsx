@@ -37,11 +37,13 @@ const Button = ({
   return (
     <button
       type="button"
-      className={`rounded-full ${styleButton.join(' ')}`}
+      className={`rounded-full flex items-center ${styleButton.join(' ')}`}
       onClick={onClick}
       disabled={disabled}
     >
-      {loading ? <Spinner /> : children}
+      {loading && <Spinner height="16px" width="16px" />}
+      &nbsp;
+      {children}
     </button>
   );
 };
