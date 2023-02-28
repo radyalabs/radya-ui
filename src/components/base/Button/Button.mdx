@@ -1,0 +1,82 @@
+import { Canvas, Meta, Source, Story, ArgsTable } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+import Button from './Button.tsx';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+Button is a clickable interactive element that triggers a response.
+
+You can place text and icons inside of a button.
+
+Buttons are often used for form submissions and to toggle elements into view.
+
+## <a id="getting-started"></a>Getting Started
+
+Import the component first
+
+<Source
+  language="jsx"
+  dark
+  format={true}
+  code={`import Button from "@/components/base/Button";`}
+/>
+
+Then start using the component:
+
+<Canvas>
+  <Story of={ButtonStories.Default} />
+</Canvas>
+
+## <a id="component-api"></a>Component API
+
+### Main Properties
+
+<ArgsTable of={Button} />
+
+## <a id="applications-examples"></a>Applications & Examples
+
+### <a id="color-variant"></a>`Color`
+
+<Canvas>
+  <Story of={ButtonStories.Default} />
+  <Story of={ButtonStories.Primary} />
+  <Story of={ButtonStories.Danger} />
+
+</Canvas>
+
+### <a id="type-variant"></a>`Variants`
+
+<Canvas>
+  <Story of={ButtonStories.Default} />
+  <Story of={ButtonStories.Outline} />
+  <Story of={ButtonStories.Dashed} />
+</Canvas>
+
+### <a id="size-variant"></a>`Size`
+
+<Canvas>
+  <Story of={ButtonStories.Large} />
+  <Story of={ButtonStories.Medium} />
+  <Story of={ButtonStories.Small} />
+</Canvas>
+
+### <a id="size-variant"></a>`Rounded`
+
+<Canvas>
+  <Story of={ButtonStories.Rounded} />
+</Canvas>
+
+### <a id="size-variant"></a>`Disabled`
+
+<Canvas style={{ background: '#2E2D2E' }}>
+  <Story of={ButtonStories.Disabled} />
+</Canvas>
+
+### <a id="size-variant"></a>`Loading`
+
+<Canvas>
+  <Story of={ButtonStories.Loading} />
+</Canvas>
