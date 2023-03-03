@@ -1,45 +1,28 @@
+import type RadioProps from './Radio.types';
+
 import styles from './Radio.module.scss';
 
-interface RadioProps {
-  /**
-   * What background color to use
-   */
-  className?: string;
-  /**
-   * What background color to use
-   */
-
-  label: string;
-  isDisabled?: boolean;
-
-  onClick?: () => void;
-}
-
-/**
- * Primary UI component for user interaction
- */
 const Radio = ({
-  label,
+  children,
   className,
-  isDisabled,
-  onClick,
+  disabled = false,
+  onChange,
 }: RadioProps) => {
   const styleRadio = [styles.radio];
-  const flex = [styles.row];
 
   if (className) styleRadio.push(className);
 
   return (
-    <div className={flex.join(' ')}>
+    <div className="flex items-center gap-1">
       <input
         type="radio"
         id="radioBtn"
         className={styleRadio.join(' ')}
-        onClick={onClick}
-        disabled={isDisabled}
+        onChange={onChange}
+        disabled={disabled}
       />
       <label htmlFor="radioBtn">
-        {label}
+        {children}
       </label>
     </div>
   );
