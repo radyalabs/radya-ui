@@ -7,6 +7,7 @@ const Radio = ({
   className,
   name = 'radio',
   id = 'radio',
+  value,
   checked,
   disabled = false,
   onChange,
@@ -22,11 +23,12 @@ const Radio = ({
         id={id}
         checked={checked}
         name={name}
+        value={value}
         className={styleRadio.join(' ')}
         onChange={onChange}
         disabled={disabled}
       />
-      <label htmlFor="radioBtn">
+      <label htmlFor={id}>
         {children}
       </label>
     </div>

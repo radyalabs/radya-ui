@@ -7,7 +7,7 @@ const meta = {
   title: 'Components/Radio',
   component: Radio,
   args: {
-    children: 'Button',
+    children: 'Radio Button',
     disabled: false,
   },
   argTypes: {
@@ -23,14 +23,12 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
 export const Basic: Story = {
   args: {
-    children: 'Radio Button',
     disabled: false,
   },
 };
 
 export const Checked: Story = {
   args: {
-    children: 'Radio Button',
     disabled: false,
     name: 'radioBtn',
     checked: true,
@@ -39,7 +37,6 @@ export const Checked: Story = {
 
 export const Disabled: Story = {
   args: {
-    children: 'Radio Button',
     disabled: true,
   },
 };

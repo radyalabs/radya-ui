@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ChangeEvent, ReactNode } from 'react';
 
 interface RadioProps {
   /**
@@ -18,6 +18,10 @@ interface RadioProps {
    */
   id?: string;
   /**
+   * value for radio
+   */
+  value?: string;
+  /**
    * checked for radio
    */
   checked?: boolean;
@@ -28,7 +32,7 @@ interface RadioProps {
   /**
    * Optional change handler
    */
-  onChange?: () => void;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default RadioProps;
