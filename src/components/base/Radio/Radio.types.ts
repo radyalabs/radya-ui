@@ -10,6 +10,18 @@ interface RadioProps {
    */
   className?: string;
   /**
+   * name of radio
+   */
+  name?: string;
+  /**
+   * id of radio
+   */
+  id?: string;
+  /**
+   * checked for radio
+   */
+  checked?: boolean;
+  /**
    * Optional radio disabled
    */
   disabled?: boolean;

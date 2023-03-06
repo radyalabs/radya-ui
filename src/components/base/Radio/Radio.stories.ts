@@ -28,6 +28,15 @@ export const Basic: Story = {
   },
 };
 
+export const Checked: Story = {
+  args: {
+    children: 'Radio Button',
+    disabled: false,
+    name: 'radioBtn',
+    checked: true,
+  },
+};
+
 export const Disabled: Story = {
   args: {
     children: 'Radio Button',
