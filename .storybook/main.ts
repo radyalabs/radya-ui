@@ -17,7 +17,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
-  staticDirs: ['..\\public'],
   webpackFinal: async (config: any) => {
     config.module.rules.push({
       test: /\.scss$/,
