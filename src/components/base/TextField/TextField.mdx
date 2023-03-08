@@ -1,0 +1,56 @@
+import { Canvas, Meta, Source, Story, ArgsTable } from '@storybook/blocks';
+import * as TextFieldStories from './TextField.stories';
+
+import TextField from './TextField.tsx';
+
+<Meta of={TextFieldStories} />
+
+# TextField
+
+Radio buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options). 
+
+Only one radio button in a group can be selected at the same time.
+
+## <a id="getting-started"></a>Getting Started
+
+Import the component first
+
+<Source
+  language="jsx"
+  dark
+  format={true}
+  code={`import TextField from "@/components/base/TextField";`}
+/>
+
+Then start using the component:
+
+<Canvas>
+  <Story of={TextFieldStories.Default} />
+</Canvas>
+
+## <a id="component-api"></a>Component API
+
+### Main Properties
+
+<ArgsTable of={TextField} />
+
+## <a id="applications-examples"></a>Applications & Examples
+
+### <a id="color-variant"></a>`Basic`
+
+<Canvas>
+  <Story of={TextFieldStories.Basic} />
+</Canvas>
+
+### <a id="color-variant"></a>`Search`
+
+<Canvas>
+  <Story of={TextFieldStories.Search} />
+</Canvas>
+
+### <a id="color-variant"></a>`Disabled`
+
+<Canvas>
+  <Story of={TextFieldStories.Disabled} />
+</Canvas>
+

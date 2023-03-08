@@ -1,0 +1,17 @@
+input {
+  outline: none;
+}
+
+.textfield {
+  @apply border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 p-2;
+
+  &.paddingSearch {
+    @apply pl-8;
+  }
+
+}
+
+.searchStyle {
+  @apply absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none;
+}
+  
