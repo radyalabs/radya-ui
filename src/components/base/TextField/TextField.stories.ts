@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import TextField from './TextField';
 
+// import searchIcon from '@/components/icons/Search/Search';
+
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta = {
   title: 'Components/TextField',
@@ -16,6 +18,14 @@ const meta = {
     },
 
     search: {
+      control: 'boolean',
+    },
+
+    success: {
+      control: 'boolean',
+    },
+
+    error: {
       control: 'boolean',
     },
   },
@@ -33,13 +43,25 @@ export const Basic: Story = {
 
 export const Search: Story = {
   args: {
-    search: true,
+    prependObject: '',
+  },
+};
+
+export const Success: Story = {
+  args: {
+    success: true,
+  },
+};
+
+export const Error: Story = {
+  args: {
+    error: true,
   },
 };
 
 export const Disabled: Story = {
   args: {
     disabled: true,
-    placeholder: '',
+    placeholder: 'disabled',
   },
 };

@@ -1,6 +1,10 @@
-import type { ChangeEvent } from 'react';
+import type { ChangeEvent, ReactNode } from 'react';
 
 interface RadioProps {
+  /**
+   * can be Text or Icon
+   */
+  prependObject?: ReactNode;
   /**
    * Custom Classname
    */
@@ -21,6 +25,18 @@ interface RadioProps {
    * Optional input search
    */
   search?: boolean;
+  /**
+   * Optional input success
+   */
+  success?: boolean;
+  /**
+   * Optional input error
+   */
+  error?: boolean;
+  /**
+   * Optional input maxlength
+   */
+  maxlength?: number;
   /**
    * Optional input disabled
    */

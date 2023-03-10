@@ -9,6 +9,14 @@ input {
     @apply pl-8;
   }
 
+  &.borderSuccess {
+    @apply border-emerald-500;
+  }
+
+  &.borderError {
+    @apply border-red-500;
+  }
+
 }
 
 .searchStyle {
