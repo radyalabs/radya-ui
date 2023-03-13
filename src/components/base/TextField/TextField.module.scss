@@ -3,18 +3,18 @@ input {
 }
 
 .textfield {
-  @apply border border-gray-300 text-gray-900 text-sm block w-full p-2.5 p-2;
+  @apply border border-gray-300 text-gray-900 text-sm block w-full p-2;
 
   &.paddingSearch {
     @apply pl-8;
   }
 
   &.borderSuccess {
-    @apply border-emerald-500;
+    @apply border-success-500;
   }
 
   &.borderError {
-    @apply border-red-500;
+    @apply border-danger-500;
   }
 
   &.rounded {

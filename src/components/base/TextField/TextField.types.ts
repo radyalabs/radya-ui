@@ -1,6 +1,6 @@
 import type { ChangeEvent, ReactNode } from 'react';
 
-interface RadioProps {
+interface TextFieldProps {
   /**
    * can be Text or Icon
    */
@@ -25,10 +25,6 @@ interface RadioProps {
    * value of input
    */
   value?: string;
-  /**
-   * Optional input search
-   */
-  search?: boolean;
   /**
    * Optional input success
    */
@@ -55,4 +51,4 @@ interface RadioProps {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default RadioProps;
+export default TextFieldProps;
