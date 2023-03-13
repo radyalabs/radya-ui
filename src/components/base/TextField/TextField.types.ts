@@ -6,6 +6,10 @@ interface RadioProps {
    */
   prependObject?: ReactNode;
   /**
+   * can be Text or Icon
+   */
+  appendObject?: ReactNode;
+  /**
    * Custom Classname
    */
   className?: string;
@@ -41,6 +45,10 @@ interface RadioProps {
    * Optional input disabled
    */
   disabled?: boolean;
+  /**
+   * Optional input rounded
+   */
+  rounded?: boolean;
   /**
    * Optional change handler
    */
