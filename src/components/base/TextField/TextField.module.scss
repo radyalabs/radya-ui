@@ -1,0 +1,37 @@
+input {
+  outline: none;
+}
+
+.textfield {
+  @apply border border-gray-300 text-gray-900 text-sm block w-full p-2;
+
+  &.paddingSearch {
+    @apply pl-8;
+  }
+
+  &.borderSuccess {
+    @apply border-success-500;
+  }
+
+  &.borderError {
+    @apply border-danger-500;
+  }
+
+  &.rounded {
+    @apply rounded-lg;
+  }
+
+  &.disabled {
+    @apply bg-gray-100 cursor-not-allowed;
+  }
+
+}
+
+.prependObject {
+  @apply absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none;
+}
+
+.appendObject {
+  @apply absolute inset-y-0 right-0 flex items-center pr-3;
+}
+  
