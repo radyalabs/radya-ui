@@ -58,7 +58,7 @@ export const Custom: Story = {
     type: 'default',
     closable: false,
     color: '#FF0000',
-    children: 'Closable',
+    children: '#FF0000',
   },
 };
 

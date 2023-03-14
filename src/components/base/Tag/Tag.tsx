@@ -24,9 +24,10 @@ const Tag = ({
 
   return (
     <div
-      className={`flex items-center gap-2 ${styleTag.join(' ')} ${
-        color && `!bg-[${color}] !text-white`
-      }`}
+      style={
+        color ? { backgroundColor: `${color}`, border: 0, color: 'white' } : {}
+      }
+      className={`flex items-center gap-2 ${styleTag.join(' ')} `}
     >
       <p>{children}</p>
       {closable && (

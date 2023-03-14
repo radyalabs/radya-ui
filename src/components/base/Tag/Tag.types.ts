@@ -14,13 +14,13 @@ interface TagProps {
    */
   type?: 'default' | 'primary' | 'warning' | 'success' | 'danger';
   /**
-   * Custom color for tag
+   * Custom color for tag in Hex Color format
    */
   color?: string;
   /**
    * Set Closable tag
    */
-  closable: boolean;
+  closable?: boolean;
   /**
    * Close Click handler
    */
