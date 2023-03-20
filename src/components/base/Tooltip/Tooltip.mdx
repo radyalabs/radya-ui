@@ -1,0 +1,32 @@
+import { Canvas, Meta, Source, Story, ArgsTable } from '@storybook/blocks';
+import * as TooltipStories from './Tooltip.stories';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+A tooltip is a contextual text bubble that displays a description for an element that appears on pointer hover or keyboard focus.
+
+## <a id="getting-started"></a>Getting Started
+
+Import the component first
+
+<Source
+  language="jsx"
+  dark
+  format={true}
+  code={`import Tooltip from '@/components/base/Tooltip/Tooltip';
+`}
+/>
+
+Then start using the component:
+
+<Canvas
+  of={TooltipStories.Top}
+  story={{
+    inline: false,
+    height: '300px',
+    width: '100%',
+  }}
+  layout="fullscreen"
+/>

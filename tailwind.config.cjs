@@ -60,6 +60,9 @@ module.exports = {
         sm: '2px',
         '4xl': '2rem',
       },
+      boxShadow: {
+        toolTipBox: '0px 3px 6px #00000029',
+      },
       transitionProperty: {
         width: 'width',
       },
