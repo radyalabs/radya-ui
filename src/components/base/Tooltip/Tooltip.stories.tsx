@@ -20,6 +20,12 @@ const meta = {
     ),
     text: 'Prompt Text',
   },
+  argTypes: {
+    direction: {
+      control: { type: 'select' },
+      options: Object.values(TooltipDirectionEnum),
+    },
+  },
 } satisfies Meta<typeof Tooltip>;
 
 export default meta;

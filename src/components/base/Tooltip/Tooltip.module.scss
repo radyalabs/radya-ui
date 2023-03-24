@@ -120,3 +120,11 @@
     }
   }
 }
+
+.my-canvas {
+  height: 500px;
+
+  .docs-story {
+    @apply h-full;
+  }
+}

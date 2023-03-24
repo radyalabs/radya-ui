@@ -1,5 +1,18 @@
-import { Canvas, Meta, Source, Story, ArgsTable } from '@storybook/blocks';
+import {
+  Canvas,
+  Controls,
+  Meta,
+  ArgTypes,
+  Source,
+  Story,
+  Stories,
+  Primary,
+  ArgsTable,
+} from '@storybook/blocks';
 import * as TooltipStories from './Tooltip.stories';
+import * as ButtonStories from '../Button/Button.stories';
+
+import styles from './Tooltip.module.scss';
 
 <Meta of={TooltipStories} />
 
@@ -10,6 +23,8 @@ A tooltip is a contextual text bubble that displays a description for an element
 ## <a id="getting-started"></a>Getting Started
 
 Import the component first
+
+{/* <Stories /> */}
 
 <Source
   language="jsx"
@@ -23,10 +38,8 @@ Then start using the component:
 
 <Canvas
   of={TooltipStories.Top}
-  story={{
-    inline: false,
-    height: '300px',
-    width: '100%',
-  }}
-  layout="fullscreen"
+  className={styles['my-canvas']}
+  story={{ inline: false, height: '100%' }}
 />
+
+<Controls of={TooltipStories.Top} />
