@@ -36,10 +36,18 @@ Import the component first
 
 Then start using the component:
 
-<Canvas
-  of={TooltipStories.Top}
-  className={styles['my-canvas']}
-  story={{ inline: false, height: '100%' }}
-/>
+<Canvas of={TooltipStories.Playground} />
 
-<Controls of={TooltipStories.Top} />
+## <a id="component-api"></a>Component API
+
+### Main Properties
+
+<Controls of={TooltipStories.Playground} />
+
+## <a id="applications-examples"></a>Applications & Examples
+
+### Tooltip `Open` Properties
+
+You can pass `open` properties to set visibility of floating tooltip card
+
+<Canvas of={TooltipStories.Open} />

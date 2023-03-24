@@ -14,7 +14,7 @@ const meta = {
   },
   args: {
     children: (
-      <Button color="primary" variant="outline">
+      <Button color="primary" variant="outline" className="my-20">
         Hover me to Try Tooltip
       </Button>
     ),
@@ -32,80 +32,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
-export const Top: Story = {
+export const Playground: Story = {
   args: {
     direction: TooltipDirectionEnum.Top,
   },
 };
 
-export const TopLeft: Story = {
+export const Open: Story = {
   args: {
-    direction: TooltipDirectionEnum.TopLeft,
-  },
-};
-
-export const TopRight: Story = {
-  args: {
-    direction: TooltipDirectionEnum.TopRight,
-  },
-};
-
-export const Bottom: Story = {
-  args: {
-    direction: TooltipDirectionEnum.Bottom,
-  },
-};
-
-export const BottomLeft: Story = {
-  args: {
-    direction: TooltipDirectionEnum.BottomLeft,
-  },
-};
-
-export const BottomRight: Story = {
-  args: {
-    direction: TooltipDirectionEnum.BottomRight,
-  },
-};
-
-export const Right: Story = {
-  args: {
-    direction: TooltipDirectionEnum.Right,
-    spacing: '110%',
-  },
-};
-
-export const RightTop: Story = {
-  args: {
-    direction: TooltipDirectionEnum.RightTop,
-    spacing: '110%',
-  },
-};
-
-export const RightBottom: Story = {
-  args: {
-    direction: TooltipDirectionEnum.RightBottom,
-    spacing: '110%',
-  },
-};
-
-export const Left: Story = {
-  args: {
-    direction: TooltipDirectionEnum.Left,
-    spacing: '110%',
-  },
-};
-
-export const LeftTop: Story = {
-  args: {
-    direction: TooltipDirectionEnum.LeftTop,
-    spacing: '110%',
-  },
-};
-
-export const LeftBottom: Story = {
-  args: {
-    direction: TooltipDirectionEnum.LeftBottom,
-    spacing: '110%',
+    direction: TooltipDirectionEnum.Top,
+    open: true,
   },
 };

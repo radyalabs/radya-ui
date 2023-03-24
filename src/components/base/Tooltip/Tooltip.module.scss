@@ -1,10 +1,14 @@
 .tooltip {
-  @apply relative;
+  @apply relative block;
 
   .tooltipText {
     @apply invisible absolute 
     w-max max-w-[250px] text-sm font-normal bg-black text-white 
     z-10 rounded-sm p-2;
+
+    &.open {
+      @apply visible;
+    }
 
     &.top {
       @apply left-1/2 -translate-x-1/2;

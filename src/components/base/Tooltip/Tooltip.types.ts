@@ -19,6 +19,10 @@ interface TooltipProps {
    * Tooltip spacing with children (in percent)
    */
   spacing?: string;
+  /**
+   * Whether the floating tooltip card is open or not.
+   */
+  open?: boolean;
 }
 
 interface SpacingStyleTypes {
