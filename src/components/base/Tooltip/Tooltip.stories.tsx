@@ -21,6 +21,11 @@ const meta = {
     text: 'Prompt Text',
   },
   argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
     direction: {
       control: { type: 'select' },
       options: Object.values(TooltipDirectionEnum),
