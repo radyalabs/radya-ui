@@ -1,5 +1,5 @@
 .tooltip {
-  @apply relative block;
+  @apply relative block w-fit;
 
   .tooltipText {
     @apply invisible absolute 

@@ -58,7 +58,7 @@ const Tooltip = ({
           showTooltip && styles.open
         }`}
         aria-hidden={open}
-        style={setSpacingPosition(direction, spacing)}
+        style={setSpacingPosition(direction, spacing || '120%')}
       >
         {text}
       </span>
