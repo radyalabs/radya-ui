@@ -1,0 +1,59 @@
+import { Canvas, Meta, Source, Story, ArgsTable } from '@storybook/blocks';
+import * as TagStories from './Tag.stories';
+
+import Tag from './Tag.tsx';
+
+<Meta of={TagStories} />
+
+# Tag
+
+Tag are often used for categorizing.
+
+You can place text inside of a tag.
+
+## <a id="getting-started"></a>Getting Started
+
+Import the component first
+
+<Source
+  language="jsx"
+  dark
+  format={true}
+  code={`import Tag from "@/components/base/Tag";`}
+/>
+
+Then start using the component:
+
+<Canvas>
+  <Story of={TagStories.Default} />
+</Canvas>
+
+## <a id="component-api"></a>Component API
+
+### Main Properties
+
+<ArgsTable of={Tag} />
+
+## <a id="applications-examples"></a>Applications & Examples
+
+### <a id="type-variant"></a>`Type`
+
+<Canvas>
+  <Story of={TagStories.Default} />
+  <Story of={TagStories.Primary} />
+  <Story of={TagStories.Warning} />
+  <Story of={TagStories.Success} />
+  <Story of={TagStories.Danger} />
+</Canvas>
+
+### <a id="color-variant"></a>`Color`
+
+<Canvas>
+  <Story of={TagStories.Custom} />
+</Canvas>
+
+### <a id="clickable-variant"></a>`Size`
+
+<Canvas>
+  <Story of={TagStories.Closable} />
+</Canvas>
