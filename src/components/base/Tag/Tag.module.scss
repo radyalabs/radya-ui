@@ -1,0 +1,28 @@
+.tag {
+  @apply max-w-fit text-sm px-3 py-6px rounded-sm;
+
+  &.typeDefault {
+    @apply bg-grey-50 text-grey-800
+    border border-grey-400;
+  }
+
+  &.typePrimary {
+    @apply bg-primary-100 text-primary-500
+    border border-primary-500;
+  }
+
+  &.typeWarning {
+    @apply bg-warning-100 text-warning-500
+    border border-warning-500;
+  }
+
+  &.typeSuccess {
+    @apply bg-success-100 text-success-600
+    border border-success-600;
+  }
+
+  &.typeDanger {
+    @apply bg-danger-100 text-danger-500
+    border border-danger-500;
+  }
+}
