@@ -1,7 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Button from '@/components/base/Button/Button';
-import TooltipDirectionEnum from '@/components/base/Tooltip/Tooltip.enum';
+import {
+  TooltipDirectionEnum,
+  TooltipTriggerEnum,
+} from '@/components/base/Tooltip/Tooltip.enum';
 
 import Tooltip from './Tooltip';
 
@@ -40,6 +43,7 @@ type Story = StoryObj<typeof meta>;
 export const Playground: Story = {
   args: {
     direction: TooltipDirectionEnum.Top,
+    trigger: TooltipTriggerEnum.Hover,
   },
 };
 
@@ -47,5 +51,6 @@ export const Open: Story = {
   args: {
     direction: TooltipDirectionEnum.Top,
     open: true,
+    trigger: TooltipTriggerEnum.Click,
   },
 };

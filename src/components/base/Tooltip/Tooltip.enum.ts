@@ -13,4 +13,9 @@ enum TooltipDirectionEnum {
   RightBottom = 'rightBottom',
 }
 
-export default TooltipDirectionEnum;
+enum TooltipTriggerEnum {
+  Hover = 'hover',
+  Click = 'click',
+}
+
+export { TooltipDirectionEnum, TooltipTriggerEnum };

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import type TooltipDirectionEnum from '@/components/base/Tooltip/Tooltip.enum';
+import type { TooltipDirectionEnum, TooltipTriggerEnum } from '@/components/base/Tooltip/Tooltip.enum';
 
 interface TooltipProps {
   /**
@@ -19,6 +19,10 @@ interface TooltipProps {
    * Tooltip spacing with children (in percent)
    */
   spacing?: string;
+  /**
+   * Tooltip trigger mode.
+   */
+  trigger?: `${TooltipTriggerEnum}`;
   /**
    * Whether the floating tooltip card is open or not.
    */

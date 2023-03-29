@@ -7,7 +7,7 @@
     z-10 rounded-sm p-2;
 
     &.open {
-      @apply visible;
+      @apply flex visible opacity-100;
     }
 
     &.top {
@@ -116,11 +116,6 @@
         @apply absolute content-[''] bottom-2 left-full mt-[-5px] border-[5px] border-solid
         border-y-transparent border-r-transparent border-l-black;
       }
-    }
-  }
-  &:hover {
-    .tooltipText {
-      @apply flex visible opacity-100;
     }
   }
 }

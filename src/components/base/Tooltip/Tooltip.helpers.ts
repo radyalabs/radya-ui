@@ -1,4 +1,4 @@
-import TooltipDirectionEnum from '@/components/base/Tooltip/Tooltip.enum';
+import { TooltipDirectionEnum } from '@/components/base/Tooltip/Tooltip.enum';
 import type { SpacingStyleTypes } from '@/components/base/Tooltip/Tooltip.types';
 
 const setSpacingPosition = (direction: string, spacing: string) => {
