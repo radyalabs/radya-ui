@@ -1,4 +1,4 @@
-import { Canvas, Meta, Source, Story, ArgsTable } from '@storybook/blocks';
+import { Canvas, Meta, Source, Story, ArgTypes } from '@storybook/blocks';
 import * as TextFieldStories from './TextField.stories';
 
 import TextField from './TextField.tsx';
@@ -7,7 +7,7 @@ import TextField from './TextField.tsx';
 
 # TextField
 
-Radio buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options). 
+Radio buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options).
 
 Only one radio button in a group can be selected at the same time.
 
@@ -24,56 +24,40 @@ Import the component first
 
 Then start using the component:
 
-<Canvas>
-  <Story of={TextFieldStories.Default} />
-</Canvas>
+<Canvas of={TextFieldStories.Basic} />
 
 ## <a id="component-api"></a>Component API
 
 ### Main Properties
 
-<ArgsTable of={TextField} />
+<ArgTypes of={TextFieldStories} />
 
 ## <a id="applications-examples"></a>Applications & Examples
 
 ### <a id="color-variant"></a>`Basic`
 
-<Canvas>
-  <Story of={TextFieldStories.Basic} />
-</Canvas>
+<Canvas of={TextFieldStories.Basic} />
 
 ### <a id="color-variant"></a>`prependObject`
 
-<Canvas>
-  <Story of={TextFieldStories.PrependObject} />
-</Canvas>
+<Canvas of={TextFieldStories.PrependObject} />
 
 ### <a id="color-variant"></a>`appendObject`
 
-<Canvas>
-  <Story of={TextFieldStories.AppendObject} />
-</Canvas>
+<Canvas of={TextFieldStories.AppendObject} />
 
 ### <a id="color-variant"></a>`Success`
 
-<Canvas>
-  <Story of={TextFieldStories.Success} />
-</Canvas>
+<Canvas of={TextFieldStories.Success} />
 
 ### <a id="color-variant"></a>`Error`
 
-<Canvas>
-  <Story of={TextFieldStories.Error} />
-</Canvas>
+<Canvas of={TextFieldStories.Error} />
 
 ### <a id="color-variant"></a>`Rounded`
 
-<Canvas>
-  <Story of={TextFieldStories.Rounded} />
-</Canvas>
+<Canvas of={TextFieldStories.Rounded} />
 
 ### <a id="color-variant"></a>`Disabled`
 
-<Canvas>
-  <Story of={TextFieldStories.Disabled} />
-</Canvas>
+<Canvas of={TextFieldStories.Disabled} />

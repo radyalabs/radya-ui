@@ -1,0 +1,129 @@
+.tooltip {
+  @apply relative block w-fit;
+
+  .tooltipText {
+    @apply invisible absolute 
+    w-max max-w-[250px] text-sm font-normal bg-black text-white 
+    z-10 rounded-sm p-2;
+
+    &.open {
+      @apply flex visible opacity-100;
+    }
+
+    &.top {
+      @apply left-1/2 -translate-x-1/2;
+
+      &::after {
+        @apply absolute content-[''] top-full left-1/2 ml-[-5px] border-[5px] border-solid
+        border-t-black border-x-transparent border-b-transparent;
+      }
+    }
+
+    &.topLeft {
+      @apply left-0 -translate-x-0;
+
+      &::after {
+        @apply absolute content-[''] top-full left-4 ml-[-5px] border-[5px] border-solid
+        border-t-black border-x-transparent border-b-transparent;
+      }
+    }
+
+    &.topRight {
+      @apply right-0 -translate-x-0;
+
+      &::after {
+        @apply absolute content-[''] top-full right-4 ml-[-5px] border-[5px] border-solid
+        border-t-black border-x-transparent border-b-transparent;
+      }
+    }
+
+    &.bottom {
+      @apply left-1/2 -translate-x-1/2;
+
+      &::after {
+        @apply absolute content-[''] bottom-full left-1/2 ml-[-5px] border-[5px] border-solid
+        border-t-transparent border-x-transparent border-b-black;
+      }
+    }
+
+    &.bottomLeft {
+      @apply left-0 -translate-x-0;
+
+      &::after {
+        @apply absolute content-[''] bottom-full left-4 ml-[-5px] border-[5px] border-solid
+        border-t-transparent border-x-transparent border-b-black;
+      }
+    }
+
+    &.bottomRight {
+      @apply right-0 -translate-x-0;
+
+      &::after {
+        @apply absolute content-[''] bottom-full right-4 ml-[-5px] border-[5px] border-solid
+        border-t-transparent border-x-transparent border-b-black;
+      }
+    }
+
+    &.right {
+      @apply top-1/2 -translate-y-1/2;
+
+      &::after {
+        @apply absolute content-[''] top-1/2 right-full mt-[-5px] border-[5px] border-solid
+        border-y-transparent border-l-transparent border-r-black;
+      }
+    }
+
+    &.rightTop {
+      @apply top-0 -translate-y-0;
+
+      &::after {
+        @apply absolute content-[''] top-3 right-full mt-[-5px] border-[5px] border-solid
+        border-y-transparent border-l-transparent border-r-black;
+      }
+    }
+
+    &.rightBottom {
+      @apply bottom-0 -translate-y-0;
+
+      &::after {
+        @apply absolute content-[''] bottom-2 right-full mt-[-5px] border-[5px] border-solid
+        border-y-transparent border-l-transparent border-r-black;
+      }
+    }
+
+    &.left {
+      @apply top-1/2 -translate-y-1/2;
+
+      &::after {
+        @apply absolute content-[''] top-1/2 left-full mt-[-5px] border-[5px] border-solid
+        border-y-transparent border-r-transparent border-l-black;
+      }
+    }
+
+    &.leftTop {
+      @apply top-0 -translate-y-0;
+
+      &::after {
+        @apply absolute content-[''] top-3 left-full mt-[-5px] border-[5px] border-solid
+        border-y-transparent border-r-transparent border-l-black;
+      }
+    }
+
+    &.leftBottom {
+      @apply bottom-0 -translate-y-0;
+
+      &::after {
+        @apply absolute content-[''] bottom-2 left-full mt-[-5px] border-[5px] border-solid
+        border-y-transparent border-r-transparent border-l-black;
+      }
+    }
+  }
+}
+
+.my-canvas {
+  height: 500px;
+
+  .docs-story {
+    @apply h-full;
+  }
+}
